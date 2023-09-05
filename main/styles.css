@@ -98,7 +98,7 @@ ol li a{
     height: 100%;
     width: 100%;
     position: absolute;
-    background:url(images/bannerbjj.jpg);
+    background:url(bannerbjj.jpg);
     background-size:cover;
     background-position:center;
     filter:brightness(50%);
@@ -222,7 +222,7 @@ span{
 }
 
 .about .content .cols p b{
-    font-size: 48pxpx;
+    font-size: 48px;
     margin-right: 2px;
     margin-left: 50px;
 }
@@ -479,7 +479,7 @@ border: 2px solid var(--prime);
     position: absolute;
     height: 100%;
     width:100%;
-    background: url(images/bjj.jpg);
+    background: url(bjj.jpg);
     background-size: cover;
     background-position: center;
     filter: brightness(20%);
@@ -503,16 +503,18 @@ border: 2px solid var(--prime);
 /*------ responsive design-------*/
 @media screen and (max-width:768px){
     .navbar{
-        padding:0 60px;
+        padding:0 30px;
+        height: 60px;
     }
     .navbar.sticky{
-        height: 80px;
+        height: 60px;
     }
     .navbar .logo img{
-       width: 75px;
-       height: 75px;
-       padding-right: 20px;
+       width: 100px;
+       height: 100px;
+       padding-right: 40px;
        margin-right: 20px;
+       padding-bottom: 45px;
        justify-content: flex-start;
        align-items: flex-start;
     }
@@ -542,14 +544,18 @@ border: 2px solid var(--prime);
         width: 25px;
         margin: auto 0;
         cursor: pointer;
-        background: url(images/menuicon.png);
+        background: url(menuicon.png);
         background-size: 25px;
-        background-position: center;
+        padding-bottom: 30px;
         filter: invert(1);
         background-repeat:no-repeat;
+        position: relative;
+        top: 50;
+        right: 0;
+        padding-right: 20px;
     }
     .navbar .toggle.active{
-        background:url(images/iconx.png);
+        background:url(iconx.png);
         background-size: 40px;
         background-position: center;
         cursor: pointer;
@@ -560,7 +566,7 @@ border: 2px solid var(--prime);
         height: 100%;
         width: 100%;
         position: absolute;
-        background:url(images/bannerbjj.jpg);
+        background:url(bannerbjj.jpg);
         background-size:cover;
         background-position:center;
         filter:brightness(50%);
@@ -572,9 +578,17 @@ border: 2px solid var(--prime);
         margin-bottom: 20px;
         border-left: 1px solid var(--prime);
     }
-    .highlights h1, h2{
-        font-size: 14vw;
+    .highlights h3{
+        font-size: 36px;
+        width: 200px;
     }
+    
+    .highlights h2{
+        font-size: 40px;
+        width: 200px;
+        padding-bottom: 15px;
+    }
+
     .highlights .join{
         font-size: 1.8vw;
         border: 1px solid var(--prime);
@@ -592,27 +606,40 @@ border: 2px solid var(--prime);
     }
     
     .about .content .cols{
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
-        flex-basis: 100%;
-        width: 500px;
+        width: 320px;
+        padding-right: 5rem;
+        margin-right: 12em;
     }
     
+    .about .content .cols .box{
+        height: 400px;
+    }
+
     .about .cols .box img{
         margin-top: 50px;
-        width: 500px;
-        height: 500px;
-        padding-right: 35px;
-
+        width: 275px;
+        height: 275px;
+        margin-left: 7em;
+    }
+    .about .first{
+        color: var(--prime);
+        font-size: larger;
+    }
+    .about .second{
+        color: #ffb62e;
+        font-size: medium;
     }
     .about p{
-        font-size: 24px;
+        font-size: 16px;
+        width: 280px;
     }
 
     .frame1 {
         position: relative;
         width: 500px;
-        height: 600px;
+        height: 650px;
         padding: 30px;
         box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
         margin: 10px;
@@ -637,8 +664,8 @@ border: 2px solid var(--prime);
     }
     
     .dojo {
-        max-width: 90%;
-        max-height: 90%;
+        width: 275px;
+        height: 275px;
         display: block;
         margin: auto;
     }
@@ -671,29 +698,38 @@ border: 2px solid var(--prime);
     .trainers h2{
         font-size: 32px;
     }
-
-    .diet .content .row{
+    .diet .content .row {
         flex-direction: column;
-        flex-wrap: nowrap;
-    }
-    .boxes .cols a{
+        justify-content: center;
         align-items: center;
     }
-    .cols b{
-        align-items: center;
-        width: 100%;
+    
+    .diet .content .row .cols {
+        width: 450px;
+        text-align: center;
     }
-    .diet .content .row:nth-child(odd) .a{
+    
+    .diet .content .row:nth-child(odd) .a {
         order: 0;
     }
-    .diet .content .row .heading{
-        font-size: 32px;
+    
+    .diet .content .row .heading {
+        font-size: 24px; /* Reduce font size for smaller screens */
     }
-    .diet .content .row .cols p{
-        font-size: 13px;
+    
+    .diet .content .row .cols p {
+        font-size: 14px; /* Increase font size for readability */
+        margin-top: 10px; /* Add some spacing at the top */
     }
-    .diet .content .row .boxes{
-        margin: auto;
+    
+    .diet .content .row .boxes {
+        margin: 20px auto; /* Adjust margin for better centering */
+    }
+    .diet .content .row .boxes iframe{
+       width: 100%;
+    }
+    .diet h6{
+        font-size: 24px;
     }
     
 }
